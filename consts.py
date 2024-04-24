@@ -1,0 +1,26 @@
+import numpy as np
+
+POSSIBLE_TARGET_COLS = np.array(['Floral', 'Fruity', 'Herbal', 'Green', 'Woody', 'Sweet', 'Balsamic', 'Earth', 'Spicy', 'Chemical', 'Animalic', 'Nutty'])
+TARGET_COLS = np.array(['Herbal', 'Green', 'Woody', 'Sweet', 'Balsamic', 'Earth', 'Spicy'])
+
+
+OLD_NUM_FEATURE_COLS_9 = 38
+OLD_NUM_FEATURE_COLS_95 = 54
+OLD_NUM_FEATURE_COLS_99 = 93
+OLD_NUM_FEATURE_COLS_999 = 149
+
+MEDIAN_NUM_FEATURE_COLS_9 = 57
+MEDIAN_NUM_FEATURE_COLS_95 = 89
+MEDIAN_NUM_FEATURE_COLS_99 = 176
+MEDIAN_NUM_FEATURE_COLS_999 = 316
+
+ZERO_NUM_FEATURE_COLS_9 = 57
+ZERO_NUM_FEATURE_COLS_95 = 89
+ZERO_NUM_FEATURE_COLS_99 = 173
+ZERO_NUM_FEATURE_COLS_999 = 311
+
+
+KFOLDS = 5
+KFOLD_SEED = 42
+
+TORCH_MANUAL_SEED = 42

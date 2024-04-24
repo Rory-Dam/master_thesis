@@ -1,0 +1,4 @@
+https://www.science.org/doi/full/10.1126/sciadv.aaq1458#body-ref-R12
+This paper shows that "both natural odors and human perceptual descriptions of smells can be described using a three-dimensional hyperbolic space."
+This theory can be brought into practice by applying the HypLL hyperbolic machine learning library to the data.
+By attempting to solve a problem using both hyperbolic and standard euclidean machine learning we can gain insights into both the hyperbolic space of the olfactory system, and the applications of hyperbolic machine learning.

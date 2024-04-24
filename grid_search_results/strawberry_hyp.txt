@@ -1,0 +1,180 @@
+----- Combination 0 -----
+('num_hidden_layers', 0) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.43773872, 0.37453863, 0.2764067, 0.17102808, 0.09617044, 0.099656455, 0.13653594, 0.15544038, 0.17313267, 0.18210913]
+----- Combination 1 -----
+('num_hidden_layers', 0) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.4044234, 0.31924334, 0.19402795, 0.09382273, 0.08781029, 0.12686035, 0.15656312, 0.17137097, 0.18090634, 0.1856325]
+----- Combination 2 -----
+('num_hidden_layers', 0) ('layer_size', 512) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.34837195, 0.2274622, 0.10017277, 0.08200932, 0.12612104, 0.15605126, 0.17324711, 0.18258286, 0.18579274, 0.19084695]
+----- Combination 3 -----
+('num_hidden_layers', 0) ('layer_size', 1024) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.2742868, 0.12880126, 0.06891276, 0.10529542, 0.1505546, 0.16967793, 0.18059348, 0.18754807, 0.19208165, 0.19284563]
+----- Combination 4 -----
+('num_hidden_layers', 1) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.3587575, 0.22167723, 0.09862351, 0.06213669, 0.09714109, 0.13366541, 0.15033981, 0.16274326, 0.16609111, 0.16902317]
+----- Combination 5 -----
+('num_hidden_layers', 1) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.31395215, 0.15036832, 0.06377183, 0.07399136, 0.11317091, 0.1332823, 0.1415033, 0.14639494, 0.14935446, 0.15412493]
+----- Combination 6 -----
+('num_hidden_layers', 1) ('layer_size', 512) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.24000514, 0.08457979, 0.06346505, 0.10198043, 0.13159415, 0.14423242, 0.14843015, 0.14832422, 0.14639114, 0.14599977]
+----- Combination 7 -----
+('num_hidden_layers', 1) ('layer_size', 1024) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.17061189, 0.057693254, 0.07956385, 0.11762698, 0.137466, 0.13845, 0.13938041, 0.14071108, 0.1422195, 0.1450586]
+----- Combination 8 -----
+('num_hidden_layers', 2) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.30118698, 0.13910148, 0.055999227, 0.06446536, 0.098566994, 0.113339104, 0.11454304, 0.118228815, 0.117483936, 0.11445769]
+----- Combination 9 -----
+('num_hidden_layers', 2) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.23704746, 0.080699064, 0.057911593, 0.08185676, 0.099584885, 0.09812973, 0.09213724, 0.09482501, 0.09962223, 0.1057657]
+----- Combination 10 -----
+('num_hidden_layers', 2) ('layer_size', 512) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.16862576, 0.054091774, 0.07009165, 0.10276647, 0.11188449, 0.11080656, 0.10874973, 0.11036333, 0.11104731, 0.11640807]
+----- Combination 11 -----
+('num_hidden_layers', 2) ('layer_size', 1024) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.11267618, 0.058323167, 0.087437846, 0.10867484, 0.10984139, 0.10815178, 0.115905, 0.11996071, 0.12163198, 0.123000085]
+----- Combination 12 -----
+('num_hidden_layers', 4) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.20463899, 0.061712347, 0.048501574, 0.062125158, 0.07619576, 0.08079773, 0.07919994, 0.08468532, 0.09413354, 0.1015106]
+----- Combination 13 -----
+('num_hidden_layers', 4) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.14999852, 0.04806168, 0.057457436, 0.071889624, 0.07769211, 0.07994029, 0.081784375, 0.09294246, 0.09923107, 0.10656327]
+----- Combination 14 -----
+('num_hidden_layers', 4) ('layer_size', 512) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.08728007, 0.056149803, 0.07508993, 0.088138625, 0.091887206, 0.09290853, 0.107208535, 0.11794736, 0.11798338, 0.119368695]
+----- Combination 15 -----
+('num_hidden_layers', 4) ('layer_size', 1024) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.05743465, 0.06728418, 0.079055645, 0.08737297, 0.08812538, 0.102591254, 0.11193385, 0.11691184, 0.11920583, 0.122356]
+----- Combination 16 -----
+('num_hidden_layers', 8) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.0777106, 0.03947658, 0.04510675, 0.05341684, 0.058113705, 0.04970937, 0.039953284, 0.03759655, 0.03785891, 0.03768879]
+----- Combination 17 -----
+('num_hidden_layers', 8) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.0576543, 0.046965074, 0.050482772, 0.05965305, 0.0602235, 0.057206042, 0.04683369, 0.041578695, 0.040104575, 0.04204743]
+----- Combination 18 -----
+('num_hidden_layers', 8) ('layer_size', 512) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.0443542, 0.052760415, 0.056169562, 0.06615763, 0.065573104, 0.061832737, 0.05437255, 0.04733801, 0.044977568, 0.04563862]
+----- Combination 19 -----
+('num_hidden_layers', 8) ('layer_size', 1024) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.051765822, 0.058115095, 0.058776908, 0.063508525, 0.060493745, 0.05523721, 0.050271817, 0.046510987, 0.04434683, 0.047301095]
+----- Combination 20 -----
+('num_hidden_layers', 16) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.038096897, 0.036231786, 0.035506245, 0.037174985, 0.038930852, 0.039148632, 0.03926862, 0.038559195, 0.039096594, 0.03825933]
+----- Combination 21 -----
+('num_hidden_layers', 16) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.041892502, 0.038919017, 0.037629995, 0.03873731, 0.0373795, 0.038094956, 0.038543027, 0.038969718, 0.037222274, 0.038993426]
+----- Combination 22 -----
+('num_hidden_layers', 16) ('layer_size', 512) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.04379628, 0.04353296, 0.042405624, 0.04149824, 0.041272055, 0.039301433, 0.037377246, 0.037686586, 0.03802533, 0.03833308]
+----- Combination 23 -----
+('num_hidden_layers', 16) ('layer_size', 1024) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 10) ('curvature', -1)
+[0.050147653, 0.04755438, 0.04325723, 0.039925355, 0.038167305, 0.03772798, 0.03826215, 0.040399607, 0.036212616, 0.039614268]
+----- Combination 0 -----
+('num_hidden_layers', 8) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.0777106, 0.03947658, 0.04510675, 0.05341684, 0.058113705]
+----- Combination 1 -----
+('num_hidden_layers', 8) ('layer_size', 128) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.045861874, 0.047003455, 0.041052543, 0.044867925, 0.046657175]
+----- Combination 2 -----
+('num_hidden_layers', 8) ('layer_size', 128) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.05044766, 0.045017544, 0.045437712, 0.046273835, 0.044946738]
+----- Combination 3 -----
+('num_hidden_layers', 8) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.0576543, 0.046965074, 0.050482772, 0.05965305, 0.0602235]
+----- Combination 4 -----
+('num_hidden_layers', 8) ('layer_size', 256) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.05081742, 0.061472572, 0.04919447, 0.04718309, 0.047396336]
+----- Combination 5 -----
+('num_hidden_layers', 8) ('layer_size', 256) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.059468877, 0.0458853, 0.04920613, 0.04845817, 0.046576045]
+----- Combination 6 -----
+('num_hidden_layers', 12) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.044807166, 0.036809944, 0.038292043, 0.038846247, 0.037170976]
+----- Combination 7 -----
+('num_hidden_layers', 12) ('layer_size', 128) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.039042454, 0.03867777, 0.03648097, 0.03778883, 0.037824605]
+----- Combination 8 -----
+('num_hidden_layers', 12) ('layer_size', 128) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.037520833, 0.040489785, 0.03477699, 0.037240617, 0.03715744]
+----- Combination 9 -----
+('num_hidden_layers', 12) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.040729888, 0.039518032, 0.041847497, 0.043243747, 0.038353533]
+----- Combination 10 -----
+('num_hidden_layers', 12) ('layer_size', 256) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.044038747, 0.03824947, 0.03804855, 0.037938733, 0.037512626]
+----- Combination 11 -----
+('num_hidden_layers', 12) ('layer_size', 256) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.042812545, 0.039027553, 0.039399765, 0.03973925, 0.037769563]
+----- Combination 12 -----
+('num_hidden_layers', 16) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.038096897, 0.036231786, 0.035506245, 0.037174985, 0.038930852]
+----- Combination 13 -----
+('num_hidden_layers', 16) ('layer_size', 128) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.034878004, 0.039416455, 0.037373297, 0.037942044, 0.038079835]
+----- Combination 14 -----
+('num_hidden_layers', 16) ('layer_size', 128) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.037815887, 0.03976944, 0.03482186, 0.036923546, 0.037323337]
+----- Combination 15 -----
+('num_hidden_layers', 16) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.041892502, 0.038919017, 0.037629995, 0.03873731, 0.0373795]
+----- Combination 16 -----
+('num_hidden_layers', 16) ('layer_size', 256) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.03851514, 0.03753697, 0.03781466, 0.037956357, 0.037473194]
+----- Combination 17 -----
+('num_hidden_layers', 16) ('layer_size', 256) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.03837636, 0.038814597, 0.03913637, 0.039232187, 0.037514064]
+----- Combination 18 -----
+('num_hidden_layers', 20) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.035465766, 0.034658235, 0.038445994, 0.038267326, 0.038869806]
+----- Combination 19 -----
+('num_hidden_layers', 20) ('layer_size', 128) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.03657538, 0.03940895, 0.036988698, 0.03780651, 0.03808085]
+----- Combination 20 -----
+('num_hidden_layers', 20) ('layer_size', 128) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.038952585, 0.040071815, 0.034801837, 0.037369102, 0.037260015]
+----- Combination 21 -----
+('num_hidden_layers', 20) ('layer_size', 256) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.04075137, 0.037369292, 0.037309155, 0.038453892, 0.037180908]
+----- Combination 22 -----
+('num_hidden_layers', 20) ('layer_size', 256) ('lr', 0.003) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.039325926, 0.037719503, 0.038066365, 0.03792731, 0.03761563]
+----- Combination 23 -----
+('num_hidden_layers', 20) ('layer_size', 256) ('lr', 0.005) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.03859699, 0.038555745, 0.038752005, 0.038119175, 0.037443902]
+----- Combination 0 -----
+('num_hidden_layers', 16) ('layer_size', 96) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.039753463, 0.034016572, 0.033266805, 0.035706356, 0.038671445]
+----- Combination 1 -----
+('num_hidden_layers', 16) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.038096897, 0.036231786, 0.035506245, 0.037174985, 0.038930852]
+----- Combination 2 -----
+('num_hidden_layers', 16) ('layer_size', 160) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.040986847, 0.03903661, 0.038483553, 0.039921723, 0.040040977]
+----- Combination 3 -----
+('num_hidden_layers', 20) ('layer_size', 96) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.03582763, 0.03295012, 0.03438847, 0.03888855, 0.038800538]
+----- Combination 4 -----
+('num_hidden_layers', 20) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.035465766, 0.034658235, 0.038445994, 0.038267326, 0.038869806]
+----- Combination 5 -----
+('num_hidden_layers', 20) ('layer_size', 160) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.0399306, 0.036463127, 0.037539497, 0.03998844, 0.039980646]
+----- Combination 6 -----
+('num_hidden_layers', 24) ('layer_size', 96) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.035906404, 0.03449464, 0.039053537, 0.03845703, 0.038390223]
+----- Combination 7 -----
+('num_hidden_layers', 24) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.034512985, 0.03530819, 0.03973347, 0.038127225, 0.038651414]
+----- Combination 8 -----
+('num_hidden_layers', 24) ('layer_size', 160) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.038288474, 0.03657856, 0.03908568, 0.03992459, 0.03989709]
+----- Combination 9 -----
+('num_hidden_layers', 28) ('layer_size', 96) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.03321109, 0.036283955, 0.039134014, 0.03850893, 0.038402956]
+----- Combination 10 -----
+('num_hidden_layers', 28) ('layer_size', 128) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.035675116, 0.03912691, 0.03969203, 0.038122263, 0.038602732]
+----- Combination 11 -----
+('num_hidden_layers', 28) ('layer_size', 160) ('lr', 0.001) ('weight_decay', 0.005) ('batch_size', 64) ('epochs', 5) ('curvature', -1)
+[0.03831195, 0.03907163, 0.03894907, 0.039776064, 0.039700024]

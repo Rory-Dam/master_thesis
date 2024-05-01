@@ -147,7 +147,9 @@ Next will investigate the targets seperately, starting with 'OVERALL LIKING'<br>
 
 
 
-<h1> TODO: </h1>
-euclidean vs hyperbolic [2, 1024] <br>
-use clustering <br>
-try doing something with an autoencoder <br>
+<h1> PLAN: </h1>
+Hyperbolic Models need a fraction of the parameters to match <br>
+the performance of Traditional NN Models for the strawberry data. <br>
+Try the different ways to represent data to see if this holds in general. <br>
+Implement something myself to get an 8 or higher, <br>
+think of Self Attention or CNN in HypLL. <br>

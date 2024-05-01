@@ -34,7 +34,7 @@ import networkx as nx
 
 # If you have stored the wordnet_mammals.json file differently that the definition here,
 # adjust the mammals_json_file string to correctly point to this json file. The file itself can
-# be found in the repository under tutorials/data/wordnet_mammals.json.
+# be found in the repository under tutorials/../data/wordnet_mammals.json.
 root = os.path.dirname(os.path.abspath(__file__))
 mammals_json_file = os.path.join(root, "data", "wordnet_mammals.json")
 with open(mammals_json_file, "r") as json_file:

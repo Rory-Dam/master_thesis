@@ -129,21 +129,23 @@ bce_positive_weights = bce_positive_weights / bce_positive_weights.min() * WEIGH
 
 
 <h1> STRAWBERRIES: </h1>
+Predicting doing overall-liking (0-1):
 
-XGBoost and Trad NN go to mean pretty quickly.<br>
-Hyp NN doesn't and get better with more layers.<br>
-For now best is:<br>
-num_hidden_layers = 24 <br>
-layer_size = 72 <br>
-lr = 0.008 <br>
-weight_decay = 0.0005 <br>
-batch_size = 1024 <br>
-epochs = 3/4 <br>
-curvature  = -1 <br>
-So many small layers with only a few epochs.
-Though this was done with all 5 targets, this might not be smart as the different targets seem to have different optimal hyper parameters.<br>
-Next will investigate the targets seperately, starting with 'OVERALL LIKING'<br>
-<br>
+| Model | MAE |
+|-------|-----|
+| XGBoost | 0.041961 |
+| Euc NN 0X32 | 0.00103 |
+| Hyp NN 1X64 | 0.00056 |
+
+
+<h1> TOMATOS: </h1>
+Predicting doing overall-liking (0-1):
+
+| Model | MAE |
+|-------|-----|
+| XGBoost | 0.102072 |
+| Euc NN | |
+| Hyp NN | |
 
 
 

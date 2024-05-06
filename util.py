@@ -16,7 +16,7 @@ def calc_bce_positive_weights(label_occurences, power, factor):
 import torch
 import torch.nn as nn
 from hypll.tensors import TangentTensor
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, hamming_loss, average_precision_score, mean_absolute_error
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, hamming_loss, average_precision_score, mean_absolute_error, r2_score
 
 def h_evaluate_loss(model, val_loader, criterion, manifold, device):
     model.eval()
@@ -88,6 +88,30 @@ def h_evaluate_mae(model, dataloader, manifold, device):
     all_targets = np.concatenate(all_targets, axis=0)
 
     mae = mean_absolute_error(all_targets, all_predictions)
+
+    return mae
+
+
+def h_evaluate_r2(model, dataloader, manifold, device):
+    model.eval()
+    all_predictions = []
+    all_targets = []
+    with torch.no_grad():
+        for inputs, targets in dataloader:
+            inputs, targets = inputs.to(device), targets.to(device)
+
+            tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
+            manifold_inputs = manifold.expmap(tangents)
+
+            outputs = model(manifold_inputs).tensor
+
+            all_predictions.append(outputs.cpu().numpy())
+            all_targets.append(targets.cpu().numpy())
+
+    all_predictions = np.concatenate(all_predictions, axis=0)
+    all_targets = np.concatenate(all_targets, axis=0)
+
+    mae = r2_score(all_targets, all_predictions)
 
     return mae
 
@@ -230,6 +254,27 @@ def evaluate_mae(model, dataloader, device):
     all_targets = np.concatenate(all_targets, axis=0)
 
     mae = mean_absolute_error(all_targets, all_predictions)
+
+    return mae
+
+
+def evaluate_r2(model, dataloader, device):
+    model.eval()
+    all_predictions = []
+    all_targets = []
+    with torch.no_grad():
+        for inputs, targets in dataloader:
+            inputs, targets = inputs.to(device), targets.to(device)
+
+            outputs = model(inputs)
+
+            all_predictions.append(outputs.cpu().numpy())
+            all_targets.append(targets.cpu().numpy())
+
+    all_predictions = np.concatenate(all_predictions, axis=0)
+    all_targets = np.concatenate(all_targets, axis=0)
+
+    mae = r2_score(all_targets, all_predictions)
 
     return mae
 

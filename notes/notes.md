@@ -144,8 +144,8 @@ Predicting doing overall-liking (0-1):
 | Model | MAE |
 |-------|-----|
 | XGBoost | 0.102072 |
-| Euc NN | |
-| Hyp NN | |
+| Euc NN | 0.00061 |
+| Hyp NN | 0.00081 |
 
 
 

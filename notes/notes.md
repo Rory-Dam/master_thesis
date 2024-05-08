@@ -150,8 +150,7 @@ Predicting doing overall-liking (0-1):
 
 
 <h1> PLAN: </h1>
-Hyperbolic Models need a fraction of the parameters to match <br>
-the performance of Traditional NN Models for the strawberry data. <br>
-Try the different ways to represent data to see if this holds in general. <br>
-Implement something myself to get an 8 or higher, <br>
-think of Self Attention or CNN in HypLL. <br>
+We use the exact data from the hyperbolic olfactory, specifically strawberry and tomato.<br>
+We train on the Overall-Liking label as this was shown to be an axis in the hyperbolic embedding made by the paper.<br>
+HOPEFULLY: This has shown that hyperbolic NN's indeed have some advantage over Euclidean NN's for this data.<br>
+We now also test the hypothesis on the beer data, so that we can compare our results against their results.<br>

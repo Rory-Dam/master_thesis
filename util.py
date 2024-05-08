@@ -13,6 +13,20 @@ def calc_bce_positive_weights(label_occurences, power, factor):
     return bce_positive_weights
 
 
+def get_fold_indices(size, k):
+    fold_size = size // k
+    rest = size % k
+
+    fold_sizes = [fold_size] * k
+
+    for i in range(rest):
+        fold_sizes[i] += 1
+
+    indices = np.cumsum([fold_sizes])
+
+    return list(zip(indices-np.array(fold_sizes), indices))
+
+
 import torch
 import torch.nn as nn
 from hypll.tensors import TangentTensor

@@ -27,6 +27,33 @@ def get_fold_indices(size, k):
     return list(zip(indices-np.array(fold_sizes), indices))
 
 
+def get_fold_indices_rand(num_types, num_per_type, k, seed=42):
+    def get_val_start_ends(size, k):
+        fold_size = size // k
+        rest = size % k
+
+        fold_sizes = [fold_size] * k
+
+        for i in range(rest):
+            fold_sizes[i] += 1
+
+        indices = np.cumsum([fold_sizes])
+
+        return list(zip(indices-np.array(fold_sizes), indices))
+
+
+    np.random.seed(seed)
+    indices = np.random.random(num_types).argsort()
+
+    val_start_ends = get_val_start_ends(num_types, k)
+    val_indices = [indices[start:end] for start, end in val_start_ends]
+
+    train_indices = [list(set(range(num_types)) - set(val_is)) for val_is in val_indices]
+    exp_train_indices = [[list(range(val_i*num_per_type,(val_i+1)*num_per_type)) for val_i in val_is] for val_is in train_indices]
+
+    return np.array(val_indices), [np.array(exp_is).flatten() for exp_is in exp_train_indices]
+
+
 import torch
 import torch.nn as nn
 from hypll.tensors import TangentTensor

@@ -154,3 +154,11 @@ We use the exact data from the hyperbolic olfactory, specifically strawberry and
 We train on the Overall-Liking label as this was shown to be an axis in the hyperbolic embedding made by the paper.<br>
 HOPEFULLY: This has shown that hyperbolic NN's indeed have some advantage over Euclidean NN's for this data.<br>
 We now also test the hypothesis on the beer data, so that we can compare our results against their results.<br>
+
+<h3>Extra stuff</h3>
+
+- Transfer learning, predict overall liking of strawberry, zero-shot tomato data.
+- Beer Aroma vs Taste labels. Compare hyp to euc on both and see if hyp is 'more better' at one of them.
+- Does hyp or euc depend more on dimensionality reduction.
+- Compare optimal shapes and other hyperparams of hyp and euc,
+see if there is a clear pattern like hyp needs more epochs to get going but keeps learning longer.

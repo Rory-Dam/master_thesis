@@ -50,8 +50,8 @@ def get_fold_indices_rand(num_types, num_per_type, k, seed=42):
 
     train_indices = [list(set(range(num_types)) - set(val_is)) for val_is in val_indices]
     exp_train_indices = [[list(range(val_i*num_per_type,(val_i+1)*num_per_type)) for val_i in val_is] for val_is in train_indices]
-
-    return np.array(val_indices), [np.array(exp_is).flatten() for exp_is in exp_train_indices]
+    
+    return val_indices, [np.array(exp_is).flatten() for exp_is in exp_train_indices]
 
 
 import torch

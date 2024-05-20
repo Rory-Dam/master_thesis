@@ -50,7 +50,7 @@ def get_fold_indices_rand(num_types, num_per_type, k, seed=42):
 
     train_indices = [list(set(range(num_types)) - set(val_is)) for val_is in val_indices]
     exp_train_indices = [[list(range(val_i*num_per_type,(val_i+1)*num_per_type)) for val_i in val_is] for val_is in train_indices]
-    
+
     return val_indices, [np.array(exp_is).flatten() for exp_is in exp_train_indices]
 
 
@@ -152,9 +152,42 @@ def h_evaluate_r2(model, dataloader, manifold, device):
     all_predictions = np.concatenate(all_predictions, axis=0)
     all_targets = np.concatenate(all_targets, axis=0)
 
-    mae = r2_score(all_targets, all_predictions)
+    r2 = r2_score(all_targets, all_predictions)
 
-    return mae
+    return r2
+
+
+def h_multi_evaluate_r2(models, dataloader, manifold, device):
+    all_predictions = []
+    all_targets = []
+    for model in models:
+        model.eval()
+        model_predictions = []
+        model_targets = []
+        with torch.no_grad():
+            for inputs, targets in dataloader:
+                inputs, targets = inputs.to(device), targets.to(device)
+
+                tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
+                manifold_inputs = manifold.expmap(tangents)
+
+                outputs = model(manifold_inputs).tensor
+
+                model_predictions.append(outputs.cpu().numpy())
+                model_targets.append(targets.cpu().numpy())
+
+        model_predictions = np.concatenate(model_predictions, axis=0)
+        model_targets = np.concatenate(model_targets, axis=0)
+
+        all_predictions.append(model_predictions)
+        all_targets.append(model_targets)
+
+    all_predictions = np.mean(all_predictions, axis=0)
+    all_targets = np.mean(all_targets, axis=0)
+
+    r2 = r2_score(all_targets, all_predictions)
+
+    return r2
 
 
 def h_evaluate_mae_classes(model, dataloader, manifold, device):
@@ -315,9 +348,39 @@ def evaluate_r2(model, dataloader, device):
     all_predictions = np.concatenate(all_predictions, axis=0)
     all_targets = np.concatenate(all_targets, axis=0)
 
-    mae = r2_score(all_targets, all_predictions)
+    r2 = r2_score(all_targets, all_predictions)
 
-    return mae
+    return r2
+
+
+def multi_evaluate_r2(models, dataloader, device):
+    all_predictions = []
+    all_targets = []
+    for model in models:
+        model.eval()
+        model_predictions = []
+        model_targets = []
+        with torch.no_grad():
+            for inputs, targets in dataloader:
+                inputs, targets = inputs.to(device), targets.to(device)
+
+                outputs = model(inputs)
+
+                model_predictions.append(outputs.cpu().numpy())
+                model_targets.append(targets.cpu().numpy())
+
+        model_predictions = np.concatenate(model_predictions, axis=0)
+        model_targets = np.concatenate(model_targets, axis=0)
+
+        all_predictions.append(model_predictions)
+        all_targets.append(model_targets)
+
+    all_predictions = np.mean(all_predictions, axis=0)
+    all_targets = np.mean(all_targets, axis=0)
+
+    r2 = r2_score(all_targets, all_predictions)
+
+    return r2
 
 
 def mini_evaluate_loss(model, val_loader, criterion, device):

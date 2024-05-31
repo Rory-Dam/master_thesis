@@ -157,8 +157,6 @@ We now also test the hypothesis on the beer data, so that we can compare our res
 
 <h3>Extra stuff</h3>
 
-- Transfer learning, predict overall liking of strawberry, zero-shot tomato data.
-- Beer Aroma vs Taste labels. Compare hyp to euc on both and see if hyp is 'more better' at one of them.
-- Does hyp or euc depend more on dimensionality reduction.
-- Compare optimal shapes and other hyperparams of hyp and euc,
-see if there is a clear pattern like hyp needs more epochs to get going but keeps learning longer.
+- subsets testing with static validation set
+- add classification loss while training
+- look at single molecule features to see if hyperbolic also works there.

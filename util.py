@@ -54,6 +54,36 @@ def get_fold_indices_rand(num_types, num_per_type, k, seed=42):
     return val_indices, [np.array(exp_is).flatten() for exp_is in exp_train_indices]
 
 
+def get_subset_fold_indices_rand(frac, num_types, num_per_type, k, seed=42):
+    def get_val_start_ends(size, k):
+        fold_size = size // k
+        rest = size % k
+
+        fold_sizes = [fold_size] * k
+
+        for i in range(rest):
+            fold_sizes[i] += 1
+
+        indices = np.cumsum([fold_sizes])
+
+        return list(zip(indices-np.array(fold_sizes), indices))
+
+
+    np.random.seed(seed)
+    indices = np.random.random(num_types).argsort()
+    indices = indices[:int(len(indices)*frac)]
+    left_over_indices = np.setdiff1d(list(range(num_types)), indices)
+
+    val_start_ends = get_val_start_ends(int(num_types*frac), k)
+    val_indices = [np.append(indices[start:end], left_over_indices) for start, end in val_start_ends]
+
+    train_indices = [list(set(range(num_types)) - set(val_is)) for val_is in val_indices]
+    exp_train_indices = [[list(range(val_i*num_per_type,(val_i+1)*num_per_type)) for val_i in val_is] for val_is in train_indices]
+
+    return val_indices, [np.array(exp_is).flatten() for exp_is in exp_train_indices]
+
+
+
 import torch
 import torch.nn as nn
 from hypll.tensors import TangentTensor

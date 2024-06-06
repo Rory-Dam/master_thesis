@@ -163,6 +163,31 @@ def h_evaluate_mae(model, dataloader, manifold, device):
     return mae
 
 
+def h_evaluate_mae_double_loss(model, dataloader, manifold, device):
+    model.eval()
+    all_predictions = []
+    all_targets = []
+    with torch.no_grad():
+        for inputs, targets in dataloader:
+            inputs, targets = inputs.to(device), targets.to(device)
+            targets, _ = targets[:,[0]], targets[:,[1]]
+
+            tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
+            manifold_inputs = manifold.expmap(tangents)
+
+            outputs = model(manifold_inputs).tensor
+
+            all_predictions.append(outputs.cpu().numpy())
+            all_targets.append(targets.cpu().numpy())
+
+    all_predictions = np.concatenate(all_predictions, axis=0)
+    all_targets = np.concatenate(all_targets, axis=0)
+
+    mae = mean_absolute_error(all_targets, all_predictions)
+
+    return mae
+
+
 def h_evaluate_r2(model, dataloader, manifold, device):
     model.eval()
     all_predictions = []
@@ -170,6 +195,31 @@ def h_evaluate_r2(model, dataloader, manifold, device):
     with torch.no_grad():
         for inputs, targets in dataloader:
             inputs, targets = inputs.to(device), targets.to(device)
+
+            tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
+            manifold_inputs = manifold.expmap(tangents)
+
+            outputs = model(manifold_inputs).tensor
+
+            all_predictions.append(outputs.cpu().numpy())
+            all_targets.append(targets.cpu().numpy())
+
+    all_predictions = np.concatenate(all_predictions, axis=0)
+    all_targets = np.concatenate(all_targets, axis=0)
+
+    r2 = r2_score(all_targets, all_predictions)
+
+    return r2
+
+
+def h_evaluate_r2_double_loss(model, dataloader, manifold, device):
+    model.eval()
+    all_predictions = []
+    all_targets = []
+    with torch.no_grad():
+        for inputs, targets in dataloader:
+            inputs, targets = inputs.to(device), targets.to(device)
+            targets, _ = targets[:,[0]], targets[:,[1]]
 
             tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
             manifold_inputs = manifold.expmap(tangents)

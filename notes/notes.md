@@ -157,6 +157,5 @@ We now also test the hypothesis on the beer data, so that we can compare our res
 
 <h3>Extra stuff</h3>
 
-- subsets testing with static validation set
-- add classification loss while training
 - look at single molecule features to see if hyperbolic also works there.
+- qualitatief, embedding plotten op 2D poincare disk

@@ -170,7 +170,7 @@ def h_evaluate_mae_double_loss(model, dataloader, manifold, device):
     with torch.no_grad():
         for inputs, targets in dataloader:
             inputs, targets = inputs.to(device), targets.to(device)
-            targets, _ = targets[:,[0]], targets[:,[1]]
+            targets, _ = targets[:,:model.regr_output_size], targets[:,-1].to(torch.long)
 
             tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
             manifold_inputs = manifold.expmap(tangents)
@@ -219,7 +219,7 @@ def h_evaluate_r2_double_loss(model, dataloader, manifold, device):
     with torch.no_grad():
         for inputs, targets in dataloader:
             inputs, targets = inputs.to(device), targets.to(device)
-            targets, _ = targets[:,[0]], targets[:,[1]]
+            targets, _ = targets[:,:model.regr_output_size], targets[:,-1].to(torch.long)
 
             tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
             manifold_inputs = manifold.expmap(tangents)

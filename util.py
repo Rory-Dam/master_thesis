@@ -139,6 +139,35 @@ def h_evaluate_metrics(model, dataloader, manifold, device, threshold=0.5):
     return accuracy, hamm, precision, sensitivity, f1, aps
 
 
+def h_evaluate_acc_aps(model, dataloader, manifold, device, threshold=0.5):
+    '''accuracy_score, average_precision_score'''
+    model.eval()
+    all_predictions = []
+    bin_predictions = []
+    all_targets = []
+    sigmoid = nn.Sigmoid()
+    with torch.no_grad():
+        for inputs, targets in dataloader:
+            inputs, targets = inputs.to(device), targets.to(device)
+
+            tangents = TangentTensor(data=inputs, man_dim=-1, manifold=manifold)
+            manifold_inputs = manifold.expmap(tangents)
+
+            outputs = sigmoid(model(manifold_inputs).tensor)
+
+            all_predictions.append(outputs.cpu().numpy())
+            bin_predictions.append((outputs > threshold).float().cpu().numpy())
+            all_targets.append(targets.cpu().numpy())
+
+    all_predictions = np.concatenate(all_predictions, axis=0)
+    bin_predictions = np.concatenate(bin_predictions, axis=0)
+    all_targets = np.concatenate(all_targets, axis=0)
+    accuracy = accuracy_score(all_targets, bin_predictions)
+    aps = np.array([average_precision_score(gt, p) for (gt, p) in zip(all_targets.T, all_predictions.T)])
+
+    return accuracy, aps
+
+
 def h_evaluate_mae(model, dataloader, manifold, device):
     model.eval()
     all_predictions = []
@@ -389,6 +418,31 @@ def evaluate_metrics(model, dataloader, device, threshold=0.5):
     aps = np.array([average_precision_score(gt, p) for (gt, p) in zip(all_targets.T, all_predictions.T)])
 
     return accuracy, hamm, precision, sensitivity, f1, aps
+
+
+def evaluate_acc_aps(model, dataloader, device, threshold=0.5):
+    '''accuracy_score, average_precision_score'''
+    model.eval()
+    all_predictions = []
+    bin_predictions = []
+    all_targets = []
+    sigmoid = nn.Sigmoid()
+    with torch.no_grad():
+        for inputs, targets in dataloader:
+            inputs, targets = inputs.to(device), targets.to(device)
+            outputs = sigmoid(model(inputs))
+
+            all_predictions.append(outputs.cpu().numpy())
+            bin_predictions.append((outputs > threshold).float().cpu().numpy())
+            all_targets.append(targets.cpu().numpy())
+
+    all_predictions = np.concatenate(all_predictions, axis=0)
+    bin_predictions = np.concatenate(bin_predictions, axis=0)
+    all_targets = np.concatenate(all_targets, axis=0)
+    accuracy = accuracy_score(all_targets, bin_predictions)
+    aps = np.array([average_precision_score(gt, p) for (gt, p) in zip(all_targets.T, all_predictions.T)])
+
+    return accuracy, aps
 
 
 def evaluate_mae(model, dataloader, device):

@@ -159,3 +159,31 @@ We now also test the hypothesis on the beer data, so that we can compare our res
 
 - look at single molecule features to see if hyperbolic also works there.
 - qualitatief, embedding plotten op 2D poincare disk
+
+<h3> Feedback draft thesis </h3>
+Introduction:
+<!-- De start gaat erg snel. In zin 2 praat je al over hyperbolic space. Waarom is dit interessant voor data science? Als het zo interessant was waren we het allemaal al aan het doen, dus duidelijk maken wat hier de mogelijkheden en toepassingen van zijn. -->
+
+<!-- Ik zou ook quotes vermijden waar mogelijk, dat geeft een behoorlijk journalistiek karakter aan het verslag. Metter=Mettes. Voor Rq 2.1 en 2.2, waarom is onderzoek doen met weinig dimensies en met minder voorbeelden interessant voor olfactory prediction? Ook mss goe dom aan het einde van de intro een high-level overzicht van de uitkomsten te geven. -->
+
+Related work:
+<!-- Wat is de relevantie van figuur 1 voor de thesis? De caption praat alleen over wat er te zien valt, niet over hoe dit relateert aan de thesis.  -->
+<!-- Je hoeft ook niet elke paragraaf te beginnen met een zin die vertelt waarover je gaat praten, want je hebt al een titel voor de subsecties. -->
+
+Methode:
+<!-- Wat is de rol van Tabel 1 in de methode?  -->
+<!-- Voor Figuur 3: de 2 varianten lijken veel op elkaar, is misschien alleen de rechter nodig als je de class output layer optional maakt? -->
+
+Setup:
+<!-- Het is lastig te zien in 4.1 wanneer je over welke dataset praat, mss goed om bij elke nieuwe dataset de eerste keer de dataset naam in bold te zetten. -->
+
+Experimenten:
+<!-- In 5.1 is hyp nn met een single of double loss? Ipv het aantal hidden layers en embedding dimensies in de tabel te zetten kan je ook in de caption aangeven dat dit de beste score is over een hyperparameter search en de waardes in de caption of in de tekst zetten. Het is ook niet duidelijk dat die van een hyperparameter search is, waardoor het lijkt alssof je hyp nns sterker hebt gemaakt en alleen zo wint. -->
+
+<!-- Verder steekt de beer dataset er hier uit. Dit is geen olfactory dataset en hyp nn werkt ook niet beter. Met deze tabel haal je alle vaart uit de resultaten, want tabel 2 en 4 zijn overtuigender. Ik zou beer in een losse subsectie doen aan het einde van de methode met als hoofdvraag: generaliseert hyp nn ook naar smaak? Dan kan je een hypothese geven waarom dit zo kan zijn en de resultaten laten zien (niet beter dan Euclidean, maar dubeele loss een goed idee). Op deze manier kan je er een positieve spin aan geven. -->
+
+<!-- Figuur 4 heeft voor mij als conclusie dat Euclidean beter is dan hyperbolic, visueel ziet het er wel leuk uit. Dus nog goed nadenken over hoe dit weer te geven, mss is de difference niet eens nodig. -->
+
+<!-- Ook zijn de tabellen niet altijd op de meest logische plek, dan heb je opeens veel tekst en daarna veel tabellen op een andere pagina. Ik zou figuren en tabellen altijd bovenaan zetten ipv midden in de tekst. -->
+
+Verder zou ik ook graag individuele voorbeelden / kwalitatieve voorbeelden willen zien waar mogelijk, of een 2D embedding van een dataset. Nu kijk ik vooral naar getallen, maar die komen pas tot leven als ik als lezer weet wat voor data het is.
